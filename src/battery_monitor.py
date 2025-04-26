@@ -17,6 +17,7 @@ logging.basicConfig(
 
 class BatteryMonitor:
     def __init__(self):
+        self.features = FeatureManager()
         self.config = self.load_config()
         self.last_notification_time = 0
 
@@ -68,6 +69,8 @@ class BatteryMonitor:
             if self.send_notification("🔋 Battery fully charged!"):
                 self.last_notification_time = current_time
                 logging.info("Notification sent")
+            if(self.features.is_enabled("low_battery_alert") and battery['percentage'] < 20 and battery['plugged'] == 'UNPLUGGED'):
+                self.send_notification("Low battery! Please charge soon")
 
 if __name__ == "__main__":
     monitor = BatteryMonitor()

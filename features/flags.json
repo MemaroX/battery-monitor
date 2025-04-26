@@ -1,0 +1,14 @@
+{
+    "new_features": {
+        "low_battery_alert": {
+            "enabled": false,
+            "description": "Alert when battery drops below 20%",
+            "owner": "MemaroX"
+        },
+        "multi_device": {
+            "enabled": false,
+            "description": "Support monitoring multiple devices",
+            "owner": "MemaroX"
+        }
+    }
+}

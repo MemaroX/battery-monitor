@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>42"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "battery-monitor"
+version = "0.1.0"
+description = "Andriod battery monitor with Telegram notification"
+authors = [{name = "Maher Gomaa Ismaeel Sayed", email = "maher.gomaaismaeel@outlook.com"}]
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "requests>=2.25.1"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "black",
+    "flake8"
+]
+

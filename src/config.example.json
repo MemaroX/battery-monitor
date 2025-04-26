@@ -1,0 +1,5 @@
+{
+	"bot_token": "Your_telegram_bot_token"
+	"chat_id": "Your_chat_id"
+	"interval": 60
+}

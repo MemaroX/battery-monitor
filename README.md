@@ -17,7 +17,7 @@ pip install -r requirements.txt
 ## Configuration
 1. Copy 'config.example.json' to 'config.json'
 2. Add your Telegram bot token and chat ID
-3. Run with "python src/battery_monitor.py"
+3. Run with 'python src/battery_monitor.py'
 
 ## Requirements
 - Termux with Termux:API

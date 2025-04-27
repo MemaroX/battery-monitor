@@ -7,6 +7,7 @@ class Feature:
     name: str
     enabled: bool
     description: str
+    owner: str = None  # Add this line to make owner optional
 
 class FeatureManager:
     def __init__(self):
@@ -16,7 +17,12 @@ class FeatureManager:
         with open(Path(__file__).parent / "flags.json") as f:
             data = json.load(f)
         return {
-            name: Feature(name, **attrs)
+            name: Feature(
+                name=name,
+                enabled=attrs["enabled"],
+                description=attrs["description"],
+                owner=attrs.get("owner")  # Safely get optional owner
+            )
             for name, attrs in data["new_features"].items()
         }
     

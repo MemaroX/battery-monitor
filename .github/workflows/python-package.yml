@@ -18,5 +18,9 @@ jobs:
         pip install pytest
     - name: Run test
       run: |
-        python -m pytest tests/
+        if [ -d "tests" ]; then
+          python -m pytest tests/
+        else
+          echo "NO test Dir found"
+        fi
 

@@ -4,6 +4,7 @@ import os
 import time
 from pathlib import Path
 import requests
+from features.experimental import FeatureManager
 
 # Configure logging
 logging.basicConfig(
